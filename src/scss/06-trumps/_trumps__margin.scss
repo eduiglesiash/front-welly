@@ -1,0 +1,30 @@
+@if $include__trump--margin{
+    /*------------------------------------
+     # TRUMP MARGIN
+    ------------------------------------*/
+
+    @for $i from $wf__trumps-margin-init through $wf__trumps-margin-end{
+        $value : $i*$wf__trumps-margin-steps;
+
+        .t-margin-#{$value}{
+            margin: #{$value}px !important;
+        }
+        .t-margin-top-#{$value}{
+            margin-top: #{$value}px !important;
+        }
+        .t-margin-right-#{$value}{
+            margin-right: #{$value}px !important;
+        }
+        .t-margin-bottom-#{$value}{
+            margin-bottom: #{$value}px !important;
+        }
+        .t-margin-left-#{$value}{
+            margin-left: #{$value}px !important;
+        }
+    }
+
+    /*------------------------------------
+     # END TRUMP MARGIN
+    ------------------------------------*/
+
+}// end if

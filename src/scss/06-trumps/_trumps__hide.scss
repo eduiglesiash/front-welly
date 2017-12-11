@@ -1,0 +1,37 @@
+
+@if $include__trumps--hide {
+
+     /*------------------------------------
+         # .t-hide
+     ------------------------------------*/
+
+    /**
+     * Hide elements on certain breakpoints based on your responsive settings.
+     */
+    .t-hide {
+        display: none !important;
+    }
+    .t-hideAccessible{
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    // Loop over our breakpoints defined in _settings.responsive.scss
+    @each $breakpoint in $breakpoints {
+
+        // Get the name of the breakpoint.
+        $alias: nth($breakpoint, 1);
+
+        @include media-query($alias) {
+
+            .t-hide-#{$alias} {
+                display: none !important;
+            }
+
+        }
+        // Close media query.
+    }
+
+}// end if

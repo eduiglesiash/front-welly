@@ -1,0 +1,50 @@
+/*------------------------------------
+    # OBJECT LAYOUT LIST
+------------------------------------*/
+
+//- Declare local var
+
+$o-list-borderColor: 1px solid color(grey-4);
+
+.o-list{
+    border: $o-list-borderColor;
+    padding-left: ($wf__base-spacing / 2)+px;
+    padding-right: ($wf__base-spacing / 2)+px;
+    margin-bottom: ($wf__base-spacing / 2)+px;
+    //ELEMENT
+    &__name{
+        border-bottom: $o-list-borderColor;
+        padding-top: ($wf__base-spacing / 2)+px;
+        padding-bottom: ($wf__base-spacing / 2)+px;
+    }
+    &__item{
+        border-bottom: $o-list-borderColor;
+        &:last-child{
+            border-bottom:0;
+        }
+    }
+
+    // MODIFIER
+    &--inline{
+        @extend %clearfix;
+        .o-list__item{
+            float: left;
+            border:0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                padding-right:0;
+            }
+        }
+    }
+    &--flush{
+        padding:0;
+    }
+}
+
+/*------------------------------------
+    # END OBJECT LIST
+------------------------------------*/

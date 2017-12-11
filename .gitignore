@@ -1,0 +1,25 @@
+#node_modules
+/node_modules/**/*
+
+
+#webstorn hidden files
+.idea/
+
+
+#bower files
+/src/bower_components/**/*
+
+
+#typescript typings
+typings/**/*
+.typingsrc
+tsconfig.json
+typings.json
+º
+#test files
+/test/**/*
+
+#final files
+build/**/*
+
+

@@ -1,0 +1,14 @@
+@if $include__trump--text-align{
+    /*------------------------------------
+     # TRUMP TEXT-ALIGN
+    ------------------------------------*/
+    @each $pos in right, center, left{
+        .t-text-align-#{$pos} {
+            text-align: #{$pos} !important;
+        }
+    }
+
+    /*------------------------------------
+     # END TRUMP TEXT-ALIGN
+    ------------------------------------*/
+}// end if

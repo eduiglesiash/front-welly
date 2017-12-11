@@ -1,0 +1,23 @@
+// /*-------------------------------------------
+// 	#FONT GENERATOR
+// ---------------------------------------------*/
+
+//  Copy font files into assets/fonts/
+//  Gulp automatic copy this files into css/fonts
+
+///* Example for use @font-face
+//
+//	@include font-face([name-font],
+//		$wf__base-path-font+'[name-font]',
+//		[font-style],
+//		[font-weight],
+//		[type-font(eot | woff | svg | ttf)]
+//	);
+//
+//*/
+@include font-face(opensans,
+    $wf__base-path-font + 'opensans/opensans-regular',
+    normal,
+    normal,
+    eot  woff  svg  ttf
+);

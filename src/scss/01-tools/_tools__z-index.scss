@@ -1,0 +1,19 @@
+
+///*------------------------------------
+//    #Z-INDEX
+//------------------------------------*/
+
+// handy function to setup z-index by name
+// if no schena is used then it will use
+// the one from _settings.z-index.scss
+
+
+
+@function z-index($name, $schema:$z-index-map) {
+  @if map-has-key($schema, $name) {
+    @return map-get($schema, $name);
+  } @else {
+    @warn "The value #{$name} is not in the map '$z-index--map'";
+    @return null;
+  }
+};

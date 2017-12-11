@@ -1,0 +1,37 @@
+//- jade mixin includes
+//- general
+include ../config
+include ../utilities/_util__headBuilder
+//- modules
+
+doctype html
+<!--[if IE 8 ]> <html lang="es" dir="ltr" class="ie8"> <![endif]-->
+<!--[if gte IE 9]><html lang="es" dir="ltr" class="ie9"><![endif]-->
+<!--[if !IE]><!--><html lang="es" dir="ltr"><!--<![endif]-->
++m-headBuilder({
+	title:"TITLE PROJECT",
+	codification:"UTF-8",
+	metaList : {
+			"author":"Everis SLU",
+			"viewport":"width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=no",
+			"keywords":"keyword1, keyword2, keyword3"
+	},
+	cssFiles:[
+//		$globals.pathCss + 'libs/libs-css-min',
+		$globals.pathCss + 'front-modules'
+			],
+	jsFiles:[
+		$globals.pathLibsJs + 'es5-sham.min',
+		$globals.pathLibsJs + 'es5-shim.min',
+		$globals.pathLibsJs + 'html5shiv.min',
+		$globals.pathLibsJs + 'respond.min',
+		$globals.pathLibsJs + 'jquery.min',
+		$globals.pathLibsJs + 'jquery-ui.min',
+		$globals.pathJs + 'front-script'
+	]
+})
+body()
+	block body
+
+//- DON'T REMOVE: This tag close HTML tag to make compatible conditional comments
+</html>

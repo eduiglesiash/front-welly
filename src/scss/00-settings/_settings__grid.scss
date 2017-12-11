@@ -1,0 +1,48 @@
+/*------------------------------------------------------------
+    #CONFIG GRID
+-------------------------------------------------------------*/
+
+$margin-row	: 	$wf__margin-row;
+
+$xl-cols	:	$wf__col-num-xl;
+$lg-cols	: 	$wf__col-num-lg;
+$md-cols	: 	$wf__col-num-md;
+$sm-cols	: 	$wf__col-num-sm;
+$xs-cols	: 	$wf__col-num-xs;
+
+
+$xl-min		: 	$wf__max-large	;
+$lg-min		: 	$wf__large		;
+$md-min		: 	$wf__medium	    ;
+$sm-min		: 	$wf__small		;
+$xs-min		: 	$wf__x-small	;
+
+
+$xl-gutter	: 	$wf__gutter-xl;
+$lg-gutter	: 	$wf__gutter-lg;
+$md-gutter	: 	$wf__gutter-md;
+$sm-gutter	: 	$wf__gutter-sm;
+$xs-gutter	: 	$wf__gutter-sx;
+
+
+$col-prefix				:	$wf__col-prefix;
+$hide-prefix			: 	$wf__hide-prefix;
+$visible-prefix			: 	$wf__visible-prefix;
+$inline-visible-prefix	: 	$wf__inline-visible-prefix;
+$offset-prefix			:	$wf__offset-prefix;
+$pull-prefix			:	$wf__pull-prefix;
+$push-prefix			:	$wf__push-prefix;
+$clear-prefix			:	$wf__clear-prefix;
+$left-prefix			:	$wf__left-prefix;
+$right-prefix			:	$wf__right-prefix;
+$both-prefix			:	$wf__both-prefix;
+$cancel-gutter-prefix	:	$wf__cancel-gutter-prefix;
+$end-prefix				:	$wf__end-prefix;
+$xl-col-prefix			:	$wf__xl-col-prefix;
+$lg-col-prefix			:	$wf__lg-col-prefix;
+$md-col-prefix			:	$wf__md-col-prefix;
+$sm-col-prefix			:	$wf__sm-col-prefix;
+$xs-col-prefix			:	$wf__xs-col-prefix;
+
+
+

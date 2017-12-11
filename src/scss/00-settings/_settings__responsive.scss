@@ -1,0 +1,34 @@
+///*------------------------------------
+//    #SETTINGS-RESPONSIVE
+//--------------------------------------*/
+
+// Hold our breakpoint aliases and conditions in a list.
+//
+// These can be invoked later on via the `media-query()` mixin found in
+// `_tools.responsive`.
+
+$wf__mobile-first : false !default;
+
+$breakpoints: (
+	'xs'  :  'only screen and (max-width: +#{$wf__x-small}+px)',
+	'sm'  :  'only screen and (max-width: +#{$wf__small}+px)',
+	'md'  :  'only screen and (max-width: +#{$wf__medium}+px)',
+	'lg'  :  'only screen and (max-width: +#{$wf__large}+px)',
+	'xl'  :  'only screen and (max-width: +#{$wf__max-large}+px)'
+) !default;
+
+@if ($wf__mobile-first == true){
+	
+	$breakpoints: (
+		'xs'  :  'only screen and (min-width: +#{$wf__x-small}+px)',
+		'sm'  :  'only screen and (min-width: +#{$wf__small}+px)',
+		'md'  :  'only screen and (min-width: +#{$wf__medium}+px)',
+		'lg'  :  'only screen and (min-width: +#{$wf__large}+px)',
+		'xl'  :  'only screen and (min-width: +#{$wf__min-large}+px)'
+	);
+}
+
+
+// If we have included this file, set a variable to tell the rest of the
+// framework that we have some responsive settings.
+$wf__responsive-settings: true;

@@ -1,0 +1,30 @@
+@if $include__trump--padding{
+    /*------------------------------------
+     # TRUMP PADDING
+    ------------------------------------*/
+
+    @for $i from $wf__trumps-padding-init through $wf__trumps-padding-end{
+        $value : $i*$wf__trumps-padding-steps;
+
+        .t-padding-#{$value}{
+            padding: #{$value}px !important;
+        }
+        .t-padding-top-#{$value}{
+            padding-top: #{$value}px !important;
+        }
+        .t-padding-right-#{$value}{
+            padding-right: #{$value}px !important;
+        }
+        .t-padding-bottom-#{$value}{
+            padding-bottom: #{$value}px !important;
+        }
+        .t-padding-left-#{$value}{
+            padding-left: #{$value}px !important;
+        }
+    }
+
+    /*------------------------------------
+     # END TRUMP padding
+    ------------------------------------*/
+
+}// end if

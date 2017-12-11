@@ -1,0 +1,38 @@
+{
+  "rules":{
+    /**
+    Enabled rule configs
+    */
+    "quotes": [2, "single"],
+    "no-console": [2],
+    "block-scoped-var": [2],
+    "no-else-return": [2],
+    "no-self-compare": [1],
+    "no-warning-comments": [1, { "terms": ["todo", "fixme", "var", "$", "describe", "xdescribe", "it" , "xit" ], "location": "start" }],
+    "no-mixed-spaces-and-tabs" : [2],
+    "eqeqeq": [2, "smart"],
+    "vars-on-top":[2],
+    "no-underscore-dangle":[2],
+
+    /**
+    Enabled style rule configs
+    */
+    "indent": [2, 2],    //All code must be indented by two spaces
+    "brace-style": [2], //Only allow "one true brace" style
+    "comma-style": [2, "last"], //"one-true-comma"
+    "consistent-this": [0, "self"], //this can only be called self
+
+
+    /**
+    Disabled rules
+    */
+    "eol-last": [0], //We don't really care about
+    "strict": [0], //Disabled for the moment
+    "dot-notation": [0], //Disabled due to IE8 compatibility
+    "camelcase": [0], //Disabled in place of eslint-plugin-google-camelcase
+    /**
+    Disabled rules for angular plugin
+    **/
+    "angular/no-service-method": [0]
+  }
+}

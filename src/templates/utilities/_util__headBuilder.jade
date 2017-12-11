@@ -1,0 +1,114 @@
+//- @jadedoc
+//- @description Generador de head para las páginas. Acepta:
+//- @param   {JSON}          params                                 Parámetros que acepta el mixin.
+//- @param   {String}        params.title                           Titulo para la pagina
+//- @param   {String}        [params.codification=UTF-8]            Codificación de caracteres
+//- @param   {JSON}          [params.metaList]                      Conjunto de etiquetas meta a imprimir. Se corresponden a un par clave - valor siendo la clave el name del meta y el valor el content
+//- @param   {String[]}      [params.cssFiles]                      Conjunto de ficheros css a añadir. Cada item del array se corresponde a un fichero. NO hay que añadir la extensión .css
+//- @param   {String[]}      [params.jsFiles]                       Conjunto de ficheros js a añadir. Cada iten del array se corresponde a un fichero. NO hay que añadir la extensión .js
+//- @param   {JSON}          [params.ieCompatibility]               Compatibilidad con navegadores antiguos. Se corresponde un con JSON donde la clave es la versión de IE y el valor es un JSOM con configuración adicional
+//- @param   {String[]}      [params.ieCompatibility.cssFiles]      Conjunto de ficheros css a añadir. Cada item del array se corresponde a un fichero. NO hay que añadir la extensión .css
+//- @param   {String[]}      [params.ieCompatibility.jsFiles]       Conjunto de ficheros js a añadir. Cada iten del array se corresponde a un fichero. NO hay que añadir la extensión .js
+//- @example +m-headBuilder({
+//-                    title:"Template",
+//-                    codification:"UTF-8",
+//-                    metaList : {
+//-                                 "author":"Everis SLU",
+//-                                 "viewport":"width=device-width, initial-scale=1.0",
+//-                                 "keywords":"keyword1, keyword2"
+//-                    },
+//-                    cssFiles:[
+//-                                "css/general",
+//-                                "css/modules",
+//-                                "libs/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom",
+//-                             ],
+//-                    jsFiles:[
+//-                                "libs/jquery-1.11.1",
+//-                                "libs/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom",
+//-                                "js/init",
+//-                                "js/main"
+//-                            ],
+//-                    ieCompatibility:{
+//-                        "7":{
+//-                            "cssFiles":[
+//-                                "css/ie7"
+//-                            ],
+//-                            "jsFiles":[
+//-                                "libs/es5.shim",
+//-                                "libs/html5shiv3.7.0"
+//-                            ]
+//-                        },
+//-                        "8":{
+//-                            "cssFiles":[
+//-                                "css/ie8"
+//-                            ],
+//-                            "jsFiles":[
+//-                                "libs/es5.shim",
+//-                                "libs/html5shiv3.7.0"
+//-                            ]
+//-                        }
+//-                    }
+//-                })
+//- @endjadedoc
+mixin m-headBuilder(params)
+	mixin _generateCssLinks(cssFiles)
+		if(cssFiles != undefined)
+			each cssFile in cssFiles
+				link(rel="stylesheet", type="text/css" href=cssFile + ".css")
+	mixin _generateJsTags(jsFiles)
+		if(jsFiles != undefined)
+			each jsFile in jsFiles
+				script(type="text/javascript",src=jsFile + ".js")
+	head
+		// Título página
+		block title
+			title= params.title
+
+		// Etiquetas META
+		meta(charset=(params.codification || "UTF-8"))
+		each val, meta in params.metaList
+			meta(name=meta, content=val)
+
+		link(rel="icon", href="favicon.ico",sizes="25x25")
+		if params.cssFiles != undefined && params.cssFiles.length > 0
+			// build:css css/style.min.css 123
+			+_generateCssLinks(params.cssFiles)
+			// end build:css
+		if(params.ieCompatibility != undefined)
+			// CSS Y SCRIPT compatibilidad IE
+			each cpMode, cpNames in params.ieCompatibility
+				- var cpModes = [];
+				if(cpNames.indexOf(",") != 0)
+					- cpModes = cpNames.split(",");
+				else
+					- cpModes = [cpNames]
+				each cpName in cpNames
+					case cpName
+						when "7"
+							<!--[if IE 7]>
+							+_generateCssLinks(cpMode.cssFiles)
+							+_generateJsTags(cpMode.jsFiles)
+							<![endif]-->
+						when "8"
+							<!--[if IE 8]>
+							+_generateCssLinks(cpMode.cssFiles)
+							+_generateJsTags(cpMode.jsFiles)
+							<![endif]-->
+						when "9"
+							<!--[if IE 9]>
+							+_generateCssLinks(cpMode.cssFiles)
+							+_generateJsTags(cpMode.jsFiles)
+							<![endif]-->
+						when "10"
+							<!--[if IE 10]>
+							+_generateCssLinks(cpMode.cssFiles)
+							+_generateJsTags(cpMode.jsFiles)
+							<![endif]-->
+
+			// Fin CSS Y SCRIPT compatibilidad IE
+
+
+		if (params.jsFiles != undefined && params.jsFiles.length > 0)
+			// build:js js/main.min.js
+			+_generateJsTags(params.jsFiles)
+			// end build:js js/main.min.js

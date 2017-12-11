@@ -1,0 +1,52 @@
+@if $include__units {
+
+    $o-unit-spacing: ($wf__base-spacing / 2)+px;
+     /*------------------------------------
+         # OBJECTS UNITS
+     ------------------------------------*/
+    .o-unit{
+        font-size:0;
+        [class*=" o-it"],
+        [class^="o-it"]{
+            display: inline-block;
+            font-size:1rem;
+            vertical-align: top;
+            padding-left: $o-unit-spacing;
+            padding-right: $o-unit-spacing;
+
+        }
+        // ELEMENT
+        &__row{
+            margin-left: -$o-unit-spacing;
+            margin-right: -$o-unit-spacing;
+        }
+    }
+    // MODIFIER
+    .o-unit--middle{
+        [class*=" o-it"],
+        [class^="o-it"] {
+            vertical-align: middle;
+        }
+    }
+    .o-unit--base{
+        [class*=" o-it"],
+        [class^="o-it"] {
+            vertical-align: baseline;
+        }
+    }
+    @for $n from 1 through 16{
+        .o-it-1\/#{$n}{
+            width: (100%/$n);
+        }
+        @each $mq, $i in $breakpoints{
+            @media #{$i}{
+                .o-it-#{$mq}-1\/#{$n}{
+                    width: (100%/$n);
+                }
+            }
+        }
+    }
+     /*------------------------------------
+         # END TRUMPS UNITS
+     ------------------------------------*/
+ }

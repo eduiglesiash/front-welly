@@ -1,0 +1,18 @@
+@if $include__trump--position{
+    /*------------------------------------
+     # TRUMP POSITION
+    ------------------------------------*/
+    @each $pos in top, right, bottom, left{
+        .t-position-#{$pos} {
+            #{$pos}:0!important;
+        }
+    }
+
+    /*------------------------------------
+     # END TRUMP POSITION
+    ------------------------------------*/
+}// end if
+
+
+
+

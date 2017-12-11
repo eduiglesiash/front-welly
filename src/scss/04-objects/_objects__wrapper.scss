@@ -1,0 +1,22 @@
+/*------------------------------------
+    # OBJECT WRAPPER
+------------------------------------*/
+
+@if $wf__wrapper-fluid == true{
+	.wrapper-fluid{
+		min-width: rem($wf__base-wrapper);
+		margin: 0 auto;
+		padding: 0 rem($wf__base-spacing/2);
+	}
+}
+@else{
+	.wrapper{
+		max-width: rem($wf__base-wrapper);
+		margin: 0 auto;
+	}
+}
+
+
+/*------------------------------------
+    # END OBJECT WRAPPER
+------------------------------------*/

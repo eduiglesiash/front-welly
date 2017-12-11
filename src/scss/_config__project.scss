@@ -1,0 +1,198 @@
+///*-------------------------------------------------------------------------
+//   #SETTINGS CONFIG
+//--------------------------------------------------------------------------*/
+
+//	CONTENT THIS FILE:
+//		# NAMESPACE
+//      # CONFIG - FONTS
+//		# BASIC VALUE FOR PROJECT
+//      # HEADINGS | FONT-SIZE DEFAULT
+//		# INCLUDE OBJECTS
+//		# CONFIG - GRID - FLOAT
+//		# CONFIG - RESPONSIVE TYPE AND MEDIAQUERIES 
+//		# INCLUDE TRUMPS
+
+
+
+
+
+///*-------------------------------------------------------------------------
+//   	# NAMESPACE
+//--------------------------------------------------------------------------*/
+
+$wf__ns				: wf- !default;
+
+
+
+
+///*-----------------------------------------------------
+///     # CONFIG - FONTS
+///-----------------------------------------------------*/
+$wf__font--default				: Arial, Helvetica, sans-serif;
+$wf__font--alternative			: verdana;
+
+
+
+
+
+
+
+
+
+///*-------------------------------------------------------------------------
+//   	# BASIC VALUE FOR PROJECT
+//--------------------------------------------------------------------------*/
+
+$wf__base-font-size            : 	16;
+$wf__base-line-height          : 	1.5;
+$wf__base-background-color     : 	white;
+$wf__base-color                : 	black;
+$wf__base-background-document  :    white;
+$wf__base-font-family          : 	$wf__font--default;
+$wf__base-wrapper              : 	960;
+$wf__base-typography-color     : 	greymedium;
+$wf__base-spacing              :	30;
+$wf__base-path-font            : 	"fonts/";
+$wf__base-path-img             : 	"../assets/img/";
+$wf__base-path-svg             : 	"../assets/img/svg/";
+$wf__base-path-icons           : 	"../assets/img/icons/";
+
+
+
+
+
+///*------------------------------------
+//    # HEADINGS | FONT-SIZE DEFAULT
+//------------------------------------*/
+
+
+
+$wf__h1: 32 !default;
+$wf__h2: 24 !default;
+$wf__h3: 20 !default;
+$wf__h4: 18 !default;
+$wf__h5: 13 !default;
+$wf__h6: 11 !default;
+
+
+
+///*-------------------------------------------------------------------------
+//   	# INCLUDE OBJECTS
+//--------------------------------------------------------------------------*/
+
+$include__grid-nora 			:	false 	!default;
+$include__debug-css				:	false	!default;
+$include__units     			:	false	!default;
+
+
+
+
+///*-----------------------------------------------------
+///		# CONFIG - OBJECTS__WRAPPER
+///-----------------------------------------------------*/
+$wf__wrapper-fluid	: 	false;
+
+
+
+
+///*-----------------------------------------------------
+///		# CONFIG - RESPONSIVE TYPE AND MEDIAQUERIES 
+///-----------------------------------------------------*/
+$wf__mobile-first       : false;
+
+$wf__x-small      : 	320;
+$wf__small        : 	768;
+$wf__medium       : 	992;
+$wf__large        : 	1280;
+$wf__min-large    : 	1400;
+$wf__max-large    : 	3500;
+
+
+
+///*-----------------------------------------------------
+///		# CONFIG - GRID - FLOAT
+///-----------------------------------------------------*/
+
+$wf__responsive--config	: true;
+
+$wf__margin-row	: 	true;
+
+$wf__col-num-xl	:	12;
+$wf__col-num-lg	:	12;
+$wf__col-num-md	:	12;
+$wf__col-num-sm	:	12;
+$wf__col-num-xs	:	12;
+
+$wf__gutter-xl		: 	$wf__base-spacing;
+$wf__gutter-lg		:	$wf__base-spacing;
+$wf__gutter-md		: 	$wf__base-spacing;
+$wf__gutter-sm		:	$wf__base-spacing;
+$wf__gutter-sx		:	$wf__base-spacing;
+
+
+$wf__col-prefix			    :	"col";
+$wf__hide-prefix			: 	"hide";
+$wf__visible-prefix			: 	"visible";
+$wf__inline-visible-prefix	: 	"inline-visible";
+$wf__offset-prefix			:	"offset";
+$wf__pull-prefix			:	"pull";
+$wf__push-prefix			:	"push";
+$wf__clear-prefix		    :	"clear";
+$wf__left-prefix			:	"left";
+$wf__right-prefix			:	"right";
+$wf__both-prefix			:	"all";
+$wf__cancel-gutter-prefix	:	"noGutter";
+$wf__end-prefix			    :	"end";
+$wf__xl-col-prefix			:	"xl";
+$wf__lg-col-prefix			:	"lg";
+$wf__md-col-prefix			:	"md";
+$wf__sm-col-prefix			:	"sm";
+$wf__xs-col-prefix			:	"xs";
+
+
+
+
+
+///*-----------------------------------------------------
+///		# INCLUDE TRUMPS
+///-----------------------------------------------------*/
+
+    // Include trumps for float
+    $include__trumps--float : false !default;
+
+
+    // Include trump for font-size
+    $include__trumps--font-size: false !default;
+        // config array with font-size number
+        $wf__trumps-fs : 12,16,18,24;
+
+
+
+    // Include trump for hide in base to breakpoints
+    $include__trumps--hide : true !default;
+
+
+    // Include trump for margin
+    $include__trump--margin : false !default;
+    // config init and end iteration with steps
+        $wf__trumps-margin-init : 0;
+        $wf__trumps-margin-steps: 5;
+        $wf__trumps-margin-end : 10;
+
+
+    // Include trump for padding
+    $include__trump--padding : false !default;
+    // config init and end iteration with steps
+        $wf__trumps-padding-init : 0;
+        $wf__trumps-padding-steps: 5;
+        $wf__trumps-padding-end : 10;
+
+    // include trump for position
+    $include__trump--position : false !default;
+
+    // include trump for text align
+    $include__trump--text-align : false !default;
+
+    // include trump for text transform
+    $include__trump--text-transform : false !default;
+

@@ -1,0 +1,16 @@
+@if $include__trumps--font-size {
+    /*------------------------------------
+       # TRUMPS FONTS SIZE
+    -----------------------------------*/
+    @each $number, $i in $wf__trumps-fs {
+        .t-fs-#{$number}{
+            font-size: #{$number}px !important;
+        }
+    }
+
+    /*------------------------------------
+       # END TRUMPS FONTS SIZE
+    -----------------------------------*/
+}// end if
+
+

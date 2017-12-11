@@ -1,0 +1,13 @@
+@if $include__trump--text-transform{
+    /*------------------------------------
+     # TRUMP TEXT-TRANSFORM
+    ------------------------------------*/
+    @each $type in uppercase, lowercase, capitalize{
+        .t-text-trans-#{$type} {
+            text-transform: #{$type} !important;
+        }
+    }
+    /*------------------------------------
+     # END TRUMP TEXT-TRANSFORM
+    ------------------------------------*/
+}// end if

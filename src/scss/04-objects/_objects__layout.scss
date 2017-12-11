@@ -1,0 +1,82 @@
+/*------------------------------------
+    # OBJECT LAYOUT UNO
+------------------------------------*/
+.o-layout{
+    max-width: 960px;
+    margin:auto;
+    @extend %clearfix;
+    
+    // ELEMENTS 
+    &__jumbo{
+        position: relative;
+        width: 100%;
+        float: left;
+
+    }
+    &__content{
+        position: relative;
+        width: 70%;
+        float: left;
+    }
+    &__sidebar{
+        position: relative;
+        width: 30%;
+        float: left;
+    }
+
+    // MODIFIER
+
+    &--dynamic{
+        .o-layout__jumbo{
+            width:70%;
+        }
+        .o-layout__content{}
+        .o-layout__sidebar{
+            float: none;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+@include media-query('lg'){
+    .o-layout{
+        padding:20px;
+        // ELEMENTS
+        &__jumbo{
+            float: none;
+            display: block;
+        }
+        &__content{
+            width:100%;
+            float: none;
+            display: block;
+        }
+        &__sidebar{
+            width:100%;
+            float: none;
+            display: block;
+        }
+
+        // MODIFIER
+
+        &--dynamic{
+            .o-layout__jumbo {
+                width: 100%;
+            }
+            .o-layout__sidebar{
+                display: block;
+            }
+        }
+    }
+}
+
+@include media-query('md') {
+    .o-layout {
+        width:100%;
+    }
+}
+/*------------------------------------
+    # END OBJECT LAYOUT UNO
+------------------------------------*/

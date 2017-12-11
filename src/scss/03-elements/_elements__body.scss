@@ -1,0 +1,14 @@
+ /*------------------------------------
+     # ELEMENT BODY
+ ------------------------------------*/
+body {
+	position                    : relative;
+	font-family                 : $wf__font--default;
+	color                       : color($wf__base-color);
+	background-color            : color($wf__base-background-document);
+	-webkit-text-size-adjust    : 100%; 
+}
+
+ /*------------------------------------
+    # END ELEMENT BODY
+------------------------------------*/
