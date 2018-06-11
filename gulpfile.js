@@ -3,7 +3,6 @@
  --------------------------------------------------*/
 //	CONTENT THIS FILE:
 //      # DEFAULT
-//      # BOWERFILES
 //		  # CACHETEMPLATES
 //      # CLEAN
 //        * CLEAN:CSS
@@ -68,7 +67,6 @@
     gJs,
     gServer,
     gOverrides,
-    gBowerfiles,
     gCssmin,
     gW3cHtml,
     gWcag;
@@ -92,73 +90,6 @@
 /*-------------------------------------------------
 *       IMPORT AND CONFIG TASK
 *------------------------------------------------*/
-    /*----------------------------------
-	  * TASK # BOWERFILES
-	  ----------------------------------*/
-      gOverrides = {
-        "overrides": {
-          "es5-shim": {
-            main: [
-              './es5-shim.min.js',
-              './es5-sham.min.js'
-            ]
-          },
-          "html5shiv": {
-            main: [
-              './dist/html5shiv.min.js'
-            ]
-          },
-          "respond": {
-            main: [
-              './dest/respond.min.js'
-            ]
-          },
-          "jquery": {
-            main: [
-              './dist/jquery.min.js'
-            ]
-          },
-          "jquery-ui": {
-            main: [
-              './jquery-ui.min.js',
-              './themes/base/tabs.css',
-              './themes/base/selectmenu.css'
-            ]
-          },
-          "slick-carousel":{
-            main:[
-              './slick/slick.min.js',
-              './slick/ajax-loader.gif',
-              './slick/fonts/*.*',
-              './slick/slick.css'
-            ]
-          },
-          "malihu-custom-scrollbar-plugin":{
-            main:[
-              './jquery.mCustomScrollbar.js',
-              './jquery.mCustomScrollbar.css'
-            ]
-          }
-        }
-      };
-      
-      gBowerfiles = {
-        concatJS : false,
-        uglifyJS : false,
-        debugJS  : false,
-        fileMinJs: 'dependencies.min.js',
-        concatCSS : false,
-        uglifyCSS : false,
-        debugCSS  : false,
-        fileMinCSS: 'libs-css-min.css',
-        debugFONT  : false,
-        debugResource  : false
-      };
-      require('./gulp/task/bower__files')(GULP, GLP, FOLDER, gOverrides, gBowerfiles);
-
-
-
-
     /*----------------------------------
 	  * TASK # CACHETEMPLATES
 	  ----------------------------------*/
@@ -407,7 +338,6 @@
             'copy:media',
             'copy:favicon',
             'copy:fonts',
-            'bowerfiles',
             'templates',
             'scss',
             'js',
@@ -438,7 +368,6 @@
             'copy:media',
             'copy:favicon',
             'copy:fonts',
-            'bowerfiles',
             'templates',
             'scss',
             'js',
