@@ -8,7 +8,7 @@
 //		# TOOLS
 //      # GENERIC
 //		# BASE
-//		# OBJETCS
+//		# OBJECTS
 //      # COMPONENTS
 //      # TRUMPS
 
@@ -20,7 +20,7 @@
 ///*--------------------------------------------------------
 //    # IMPORT FILE CONFIG SCSS
 //----------------------------------------------------------*/
-@import '_config__project';
+@import '_config.project';
 
 
 
@@ -29,7 +29,10 @@
 ///*--------------------------------------------------------
 //    # SETTINGS
 //----------------------------------------------------------*/
-@import '00-settings/_settings__*';
+@import '00-settings/_settings.colors';
+@import '00-settings/_settings.grid';
+@import '00-settings/_settings.responsive';
+@import '00-settings/_settings.z-index';
 
 
 
@@ -39,7 +42,13 @@
 ///*----------------------------------------------------------
 //    # TOOLS
 //----------------------------------------------------------*/
-@import '01-tools/_tools__*';
+@import '01-tools/_tools.colors';
+@import '01-tools/_tools.fonts';
+@import '01-tools/_tools.percentage';
+@import '01-tools/_tools.pixel-to-em';
+@import '01-tools/_tools.pixel-to-rem';
+@import '01-tools/_tools.responsive';
+@import '01-tools/_tools.z-index';
 
 
 
@@ -48,7 +57,12 @@
 // /*----------------------------------------------------------
 //     # GENERIC
 // ----------------------------------------------------------*/
-@import "02-generic/_generic__*";
+@import "02-generic/_generic.reset";
+@import "02-generic/_generic.box-sizing";
+@import "02-generic/_generic.clearfix";
+@import "02-generic/_generic.fonts";
+@import "02-generic/_generic.invisibility";
+
 
 
 
@@ -57,7 +71,11 @@
 // /*----------------------------------------------------------
 //     # BASE
 // ----------------------------------------------------------*/
-@import '03-elements/_elements__*';
+@import '03-elements/_element.body';
+@import '03-elements/_element.heading';
+@import '03-elements/_element.html';
+@import '03-elements/_element.image';
+@import '03-elements/_element.lists';
 
 
 
@@ -65,18 +83,32 @@
 // /*----------------------------------------------------------
 //     # OBJETCS
 // ----------------------------------------------------------*/
-@import '04-objects/_objects__*';
+@import '04-objects/_objects.avatar';
+@import '04-objects/_objects.layout';
+@import '04-objects/_objects.list';
+@import '04-objects/_objects.nora';
+@import '04-objects/_objects.unit';
+@import '04-objects/_objects.wrapper';
+@import '04-objects/_objects.debug';
+
 
 
 
 // /*----------------------------------------------------------
 //     # COMPONENTS
 // ----------------------------------------------------------*/
-@import '05-components/_*';
+@import '05-components/_component.box';
 
 
 
 // /*----------------------------------------------------------
 //     # TRUMPS
 // ----------------------------------------------------------*/
-@import '06-trumps/_trumps__*';
+@import '06-trumps/_trumps.float';
+@import '06-trumps/_trumps.font-size';
+@import '06-trumps/_trumps.hide';
+@import '06-trumps/_trumps.margin';
+@import '06-trumps/_trumps.padding';
+@import '06-trumps/_trumps.position';
+@import '06-trumps/_trumps.text-align';
+@import '06-trumps/_trumps.text-transform';

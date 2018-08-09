@@ -20,7 +20,7 @@
 //   	# NAMESPACE
 //--------------------------------------------------------------------------*/
 
-$wf__ns				: wf- !default;
+$wf__ns				: wk- !default;
 
 
 
@@ -82,7 +82,7 @@ $wf__h6: 11 !default;
 
 $include__grid-nora 			:	false 	!default;
 $include__debug-css				:	false	!default;
-$include__units     			:	false	!default;
+$include__units     			:	true	!default;
 
 
 

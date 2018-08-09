@@ -20,19 +20,18 @@
 
     function scss(){
       return	GULP.src(GLP.path.join(FOLDER.src, FOLDER.scss) + '*.scss')
-        .pipe(GLP.sourcemaps.init())
+
         .pipe(GLP.plumber({
           errorHandler: function(err){
             return UTILS.errorCompile(GLP, err, this)
           }
         }))
-        .pipe(GLP.sassGlob())
-
+        .pipe(GLP.sourcemaps.init())
 				.pipe(GLP.sass(gScss.optScss))
+        .pipe(GLP.sourcemaps.write())
 				.pipe(GLP.autoprefixer(gScss.autoprefix))
         .pipe(GLP.groupCssMediaQueries())
         .pipe(GLP.pixrem(gScss.pixrem))
-        .pipe(GLP.sourcemaps.write())
         .pipe(GULP.dest(GLP.path.join(FOLDER.build, FOLDER.css)))
 				.pipe(GLP.browserSync.stream());
     }

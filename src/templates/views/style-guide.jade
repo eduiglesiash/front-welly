@@ -1,0 +1,68 @@
+//- 
+extends ../layouts/layout__primary
+
+//- INCLUDES
+include ../components/_wf-example
+
+block title
+	title!='Guide to project styles'
+
+block body
+	h1 Guide to project styles
+	header(class="o-unit")
+		nav(class="o-unit-row")
+			ul(class="o-it-1/1")
+				li: a(href="#nolink", title="Ir a ", target="_self") Link 1
+				li: a(href="#nolink", title="Ir a ", target="_self") Link 2
+				li: a(href="#nolink", title="Ir a ", target="_self") Link 3
+				li: a(href="#nolink", title="Ir a ", target="_self") Link 4
+	main(class="o-unit")
+		div(class="o-unit-row")
+			section(class="o-it-1/2")
+				h2 Seccion de contacto OK
+				form(id="FormTestWin" action="", method="")
+					fieldset
+						legend Datos de usuario
+						div.form__group
+							label(for="name01") Name:
+							input(id="name01", name="name01", type="text", placeholder="name")
+
+						div.form__group
+							label(for="surname01") Surname:
+							input(id="surname01", name="surname01", type="text", placeholder="surname")
+
+						div.form__group
+							label(for="email01") Email:
+							input(id="email01", name="email01", type="email", placeholder="email" required)
+
+						div.form__group
+							label(for="password01") Pass:
+							input(id="password01", name="password01", type="password", placeholder="password" required)
+
+						div.form__group
+							label(for="age01") Pass:
+							input(id="age01", name="age01", type="number", placeholder="number", step="5", min="0", max="150")
+
+						div.form__group
+							label(for="personalSite01") Personal Site:
+							input(id="personalSite01", name="personalSite01", type="url", placeholder="Personal Site")
+
+					fieldset
+						legend Datos del vehículo
+						div.form__group
+							label(for="brand01") Surname:
+							input(id="brand01", name="brand01", type="text", placeholder="Brand")
+
+						div.form__group
+							label(for="model01") Name:
+							input(id="model01", name="model01", type="text", placeholder="Model")
+
+						div.form__group
+							label(for="color01") Color:
+							input(id="color01", name="color01", type="color", placeholder="color" required)
+
+			section(class="o-it-1/2")
+				h2 Seccion de contacto KO
+				form(id="FormTestWrong" action="", method="")
+					fieldset
+						legend Datos de usuario

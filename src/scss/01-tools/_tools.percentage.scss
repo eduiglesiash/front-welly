@@ -1,0 +1,7 @@
+// ==============================================
+//      # PERCENTAGE
+// ==============================================
+
+@function percentage($elemPixels,$totalPixels){
+	@return unquote(($elemPixels*100)/$totalPixels+"%")
+}
