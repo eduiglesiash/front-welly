@@ -1,8 +1,10 @@
 //- jade mixin includes
 //- general
-include ../config
-include ../utilities/_util__headBuilder
+include ../config.pug
+include ../utilities/_util__headBuilder.pug
+
 //- modules
+
 
 doctype html
 <!--[if IE 8 ]> <html lang="es" dir="ltr" class="ie8"> <![endif]-->
@@ -12,21 +14,14 @@ doctype html
 	title:"TITLE PROJECT",
 	codification:"UTF-8",
 	metaList : {
-			"author":"Everis SLU",
+			"author":"Eduardo Iglesias Hernández",
 			"viewport":"width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=no",
 			"keywords":"keyword1, keyword2, keyword3"
 	},
 	cssFiles:[
-//		$globals.pathCss + 'libs/libs-css-min',
 		$globals.pathCss + 'front-modules'
 			],
 	jsFiles:[
-		// $globals.pathLibsJs + 'es5-sham.min',
-		// $globals.pathLibsJs + 'es5-shim.min',
-		// $globals.pathLibsJs + 'html5shiv.min',
-		// $globals.pathLibsJs + 'respond.min',
-		// $globals.pathLibsJs + 'jquery.min',
-		// $globals.pathLibsJs + 'jquery-ui.min',
 		$globals.pathJs + 'front-script'
 	]
 })

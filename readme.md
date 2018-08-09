@@ -18,7 +18,7 @@ Podeis encontrarlo en nuestro SVN /template/WeFront-v2
 	.editorconfig
 	.gitignore
 	bower.json
-	gulpfile.js
+	gulpfile.babel.js
 	package.json
 	readme.md
 	```
