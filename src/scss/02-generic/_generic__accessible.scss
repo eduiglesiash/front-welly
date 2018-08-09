@@ -1,8 +1,21 @@
-/*------------------------------------------------------------------------
-    #ACCESSIBLE
--------------------------------------------------------------------------*/
+// ==============================================
+//      # ACCESSIBLE
+// ==============================================
 
-.hideAccessible {
-	position: absolute;
-	right: 9999rem;
+// e.g (https://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
+
+// OLD TECHNIQUE
+//.hideAccessible {
+//	position: absolute;
+//	right: 9999rem;
+//}
+
+
+.invisibility,
+.hideAccessible{
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
 }

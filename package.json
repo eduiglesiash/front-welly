@@ -1,7 +1,7 @@
 {
-  "name": "wefrontv2stable",
-  "version": "2.0.1",
-  "author": "Centro de excelencia en desarrollo front, Everis SLU",
+  "name": "webkit",
+  "version": "1.0.0",
+  "author": "Eduardo Iglesias Hernández",
   "scripts": {},
   "devDependencies": {
     "browser-sync": "^2.18.5",
@@ -50,5 +50,7 @@
     "path": "^0.12.7",
     "run-sequence": "^1.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^6.3.0"
+  }
 }
