@@ -34,7 +34,7 @@ export function templates() {
     }))
     .pipe(pug(config.pug.options))
     .pipe(plumber.stop())
-    .pipe(gulp.dest(config.path.build))
+    .pipe(gulp.dest(config.path.build.root))
 }
 
 

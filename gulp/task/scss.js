@@ -33,7 +33,7 @@ export function styles() {
     .pipe(sourceMap.write())
     .pipe(plumber.stop())
     .pipe(gulp.dest(config.path.build.css))
-    .pipe(bs.reload)
+    //.pipe(bs.reload)
 }
 
 

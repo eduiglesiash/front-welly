@@ -18,7 +18,7 @@ export function serverAndWatch() {
 
   // Watch files
   gulp.watch(config.path.templates + '**/*.pug', ['templates']);
-  gulp.watch(config.path.styles + '**/*.scss', ['styles']);
+  gulp.watch(config.path.styles + '**/*.scss', ['styles']).on('change', bs.reload);
 
   // Browser reload when there is change in html files
   gulp.watch(config.path.build + '**/*.html').on('change', bs.reload);
