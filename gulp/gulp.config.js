@@ -64,10 +64,10 @@ const CONFIG = {
   },
   browserSync: {
     server: {
-        baseDir: [
-            ROOT + BUILD
-        ],
-        directory: true
+      baseDir: [
+        ROOT + BUILD
+      ],
+      directory: true
     },
     // PORT DEV
     port: 5000,

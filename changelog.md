@@ -5,6 +5,5 @@
 [x] Output config params of gulpfile
 [] Config project online
 [] Welcome project for init project
-[]
 
 
