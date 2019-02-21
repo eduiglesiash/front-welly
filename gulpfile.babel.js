@@ -42,6 +42,7 @@
 //      IMPORT LIB'S
 // ==============================================
 import gulp from 'gulp';
+import rs from 'run-sequence';
 
 
 // ==============================================
@@ -80,7 +81,12 @@ gulp.task('styles', styles);
 // ==============================================
 //      TASK # SERVER AND WATCH
 // ==============================================
-gulp.task('serve', serverAndWatch);
+gulp.task('serve', function(){
+  rs(
+    'templates',
+    'styles',
+    serverAndWatch
+  )});
 
 
 // ==============================================

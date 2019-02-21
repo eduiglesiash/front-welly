@@ -1,0 +1,35 @@
+//- 
+extends layouts/layout__primary.pug
+
+//- INCLUDES
+//- include folders/fichero.pug
+
+block title
+	title!='Herramienta para probar el contraste de Vodafone'
+
+block body
+
+	header
+		p Logo de Vodafone
+	main
+		h1 Contrast Test
+		section
+			form(action="")
+				fieldset
+					legend Selecciona los parámetros a configurar
+					.form__group
+						label(for="fonts") Elige la fuente 
+						select(id="fonts", name="fonts")
+							option(value="fonts01") Fuente uno
+							option(value="fonts02") Fuente dos
+							option(value="fonts03") Fuente tres
+							option(value="fonts04") Fuente cuatro
+					.form__group
+						input(id="hex", type="radio", value="hex" name="typeCodeColor")
+						label(for="hex") Hexadecimal
+					.form__group
+						input(id="rgb", type="radio", value="rgb", name="typeCodeColor")
+						label(for="rgb") RGB
+					.form__group
+						label(for="colorbck") Color de fondo
+						input(type="color", id="colorbck")
